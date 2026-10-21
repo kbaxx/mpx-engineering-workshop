@@ -10,11 +10,12 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "build": "vite build",
+    "build": "vite build && node scripts/build-site-worker.mjs",
     "lint": "eslint .",
     "serve": "NODE_ENV=production node server.js",
     "test": "node --test test/*.test.js",
-    "check": "npm run lint && npm test && npm run build"
+    "check": "npm run lint && npm test && npm run build",
+    "preview:site": "node scripts/preview-site-worker.mjs"
   },
   "dependencies": {
     "react": "^19.0.0",
